@@ -1,14 +1,14 @@
 public class Produto {
     String nome, id;
-    int valor, estoque;
+    int valor, estoque, qnt;
 
-    public Produto(String nome, String id,int valor, int estoque) {
+    public Produto(String nome, String id,int valor, int estoque, int qnt) {
         this.nome = nome;
         this.id = id;
         this.valor = valor;
         this.estoque = estoque;
+        this.qnt = qnt;
     }
-
     public String getNome() {
         return nome;
     }
@@ -18,7 +18,8 @@ public class Produto {
     }
 
     public int getValor() {
-        return valor;
+        setEstoque(estoque-qnt);
+        return valor*qnt;
     }
 
     public void setValor(int valor) {
