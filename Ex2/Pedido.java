@@ -7,8 +7,8 @@ public class Pedido extends Item{
         this.total = total;
         this.item = item;
     }
-
     public void colocarNoCarrinho(Item item, int total) {
-        ((Produto)item).getValor() += total;
+        total += ((Produto)item).getValor();
     }
+    
 }
